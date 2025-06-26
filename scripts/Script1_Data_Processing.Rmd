@@ -14,6 +14,9 @@ install.packages(c("here","tidyverse","dplyr","readxl"))
 install.packages("remotes")                        # if not already installed
 remotes::install_github("jknappe/quantitray")      # installs the package directly from GitHub
 
+remove.packages("rlang")
+install.packages("rlang")
+
 # Load libraries
 library(here)
 library(tidyverse)
@@ -23,6 +26,7 @@ library(readxl)
 
 # Check current directory & set new directory if needed
 here()
+
 ```
 
 ## Training Module 1. Microbiology lab results and qPCR data cleaning
@@ -218,7 +222,11 @@ microbio_clean3 <- microbio_clean2 %>%
 write_csv(microbio_clean3, here("clean_data", "microbial_data_cleaned.csv")) # clean_data is folder in current directory
 
 # Add code to select key variables and save cleaned TAC dataframe here
+here()
+...
 
-```
+#Test
+read.csv()
 
 This is the end of the first training session!
+here()
